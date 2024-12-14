@@ -1,6 +1,7 @@
 package com.example.userService.api;
 
 import com.example.userService.Service.UserService;
+import com.example.userService.Service.userServiceImp;
 import com.example.userService.domain.User;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -17,9 +18,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class UserController {
-    private final UserService userService;
+    private final userServiceImp userService;
     @Autowired
-    public UserController(UserService userService){
+    public UserController(userServiceImp userService){
         this.userService=userService;
 
     }
